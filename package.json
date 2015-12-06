@@ -25,7 +25,11 @@
             {
                 "command": "FuzzyFinder.fuzzySearch",
                 "key": "cmd+t"
-            }
+            },
+			{
+				"command": "FuzzyFinder.fuzzySearch",
+				"key": "cmd+p"
+			}
         ]
     },
 	"scripts": {
