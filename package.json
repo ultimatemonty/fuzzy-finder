@@ -1,7 +1,7 @@
 {
 	"name": "fuzzy-finder",
 	"displayName": "fuzzy-finder",
-	"description": "quickly find and open files using cmd-t",
+	"description": "quickly find and open files using cmd+t",
 	"version": "0.0.1",
 	"publisher": "ultimatemonty",
 	"engines": {
@@ -11,15 +11,23 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.sayHello"
+		"onCommand:FuzzyFinder.fuzzySearch"
 	],
 	"main": "./out/src/extension",
 	"contributes": {
-		"commands": [{
-			"command": "extension.sayHello",
-			"title": "Hello World"
-		}]
-	},
+        "commands": [
+            {
+                "command": "FuzzyFinder.fuzzySearch",
+                "title": "Fuzzy Finder"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "FuzzyFinder.fuzzySearch",
+                "key": "cmd+t"
+            }
+        ]
+    },
 	"scripts": {
 		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
 		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
